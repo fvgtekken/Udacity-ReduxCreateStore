@@ -13,7 +13,10 @@ function createStore (reducer) {
   const getState = () => state
 
   const subscribe = (listener) => {
+    
+  
     listeners.push(listener)
+
     return () => {
       listeners = listeners.filter((l) => l !== listener)
     }
